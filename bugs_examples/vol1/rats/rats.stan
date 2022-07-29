@@ -3,13 +3,13 @@
 data {
   int<lower=0> N;
   int<lower=0> T;
-  array[T] real x;
-  array[N, T] real y;
+  real x[T];
+  real y[N, T];
   real xbar;
 }
 parameters {
-  array[N] real alpha;
-  array[N] real beta;
+  real alpha[N];
+  real beta[N];
   
   real mu_alpha;
   real mu_beta; // beta.c in original bugs model
